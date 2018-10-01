@@ -54,10 +54,7 @@ char * stringchr( char *s, char c ){
 	while (((*s)!=c) && (*s)){
 	s++;
 	}
-	if (((*s)!=c) && (*s))
-		return 'no';
-	else 
-		return s;
+	return s;
 }
 
 int main(){
@@ -117,7 +114,7 @@ int main(){
   printf("the 'u' character found at index %d\n", point-str2);
   point = stringchr(str2, ' '); //index 8
   printf("the ' ' character found at index %d\n", point-str2);
-  point = stringchr(str2, 'l'); //null -PROBLEM: IT SUBTRACTS THE MEMORY LOCATION OF THE NULL POINTER FROM THE MEMORY LOCATION OF POINT AND RETURNS THAT VALUE
-  printf("the 'l' character found at index %d\n", point-str2); //it keeps returning 16 so idk if my previous statement is right... but idk how to fix it rn   
+  point = stringchr(str2, 'l'); //null
+  printf("the 'l' character is not found\n");
   }
   
